@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import es.whinedo.pilots.cloud.lab1.model.Team;
 import es.whinedo.pilots.cloud.lab1.repositories.ITeamRepository;
 
-@RestController
+//@RestController
 public class RestFulController {
 
 	

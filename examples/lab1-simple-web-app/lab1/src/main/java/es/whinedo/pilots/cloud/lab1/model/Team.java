@@ -1,8 +1,13 @@
 package es.whinedo.pilots.cloud.lab1.model;
 
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Team {
@@ -17,17 +22,28 @@ public class Team {
 	
 	private String mascotte;
 	
+	@OneToMany(cascade=CascadeType.ALL)
+	@JoinColumn(name="teamId")
+	private Set<Player> players;
 
 	public Team() {
 		super();
 	}
 
-	public Team(Long id, String name, String location, String mascotte) {
+	public Team(String name, String location, String mascotte,Set<Player> players) {
 		this();
-		this.id = id;
 		this.name = name;
 		this.location = location;
 		this.mascotte = mascotte;
+		this.players = players;
+	}
+	
+
+	public Team(String location, String name,  Set<Player> players) {
+		this();
+		this.name = name;
+		this.location = location;
+		this.players = players;
 	}
 
 	public Long getId() {
@@ -60,6 +76,14 @@ public class Team {
 
 	public void setMascotte(String mascotte) {
 		this.mascotte = mascotte;
+	}
+
+	public Set<Player> getPlayers() {
+		return players;
+	}
+
+	public void setPlayers(Set<Player> players) {
+		this.players = players;
 	}
 	
 	
