@@ -1,4 +1,4 @@
-package es.whinedo.pilots.cloud.lab4verb.controller;
+package es.whinedo.pilots.cloud.lab4article.controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;

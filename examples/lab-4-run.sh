@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-for project in lab-4-eureka-server lab-4-verb lab-4-subject  lab-4-article lab-4-noun lab-4-adjective lab-4-sentence; do
+for project in lab-2-config-server lab-4-eureka-server lab-4-verb lab-4-subject  lab-4-article lab-4-noun lab-4-adjective lab-4-sentence:ew; do
   # do something like: echo $databaseName
 
 	echo "-------------------"
