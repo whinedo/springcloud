@@ -21,7 +21,6 @@ screen -dmS $project-1 java -jar ../lab4/$project/target/$project-0.0.1-SNAPSHOT
 screen -dmS $project-2 java -jar ../lab4/$project/target/$project-0.0.1-SNAPSHOT.jar -Dspring.profiles.active=secondary &
 screen -dmS $project-3 java -jar ../lab4/$project/target/$project-0.0.1-SNAPSHOT.jar -Dspring.profiles.active=tertiary &
 
-
 cd word-server
 for project in verb subject article noun adjective sentence; do
 
