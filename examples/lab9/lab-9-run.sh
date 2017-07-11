@@ -13,8 +13,8 @@
 #done 
 
 
-project="lab2-config-server"
-screen -dmS $project java -jar ../$project/target/$project-0.0.1-SNAPSHOT.jar &
+project="config-server"
+screen -dmS $project java -jar $project/target/$project-0.0.1-SNAPSHOT.jar &
 
 project="lab-4-eureka-server"
 screen -dmS $project-1 java -jar ../lab4/$project/target/$project-0.0.1-SNAPSHOT.jar -Dspring.profiles.active=primary & 
@@ -22,6 +22,7 @@ screen -dmS $project-2 java -jar ../lab4/$project/target/$project-0.0.1-SNAPSHOT
 screen -dmS $project-3 java -jar ../lab4/$project/target/$project-0.0.1-SNAPSHOT.jar -Dspring.profiles.active=tertiary &
 
 cd word-server
+#for project in verb subject article noun adjective sentence; do
 for project in verb subject article noun adjective; do
 
 	echo "-------------------"
@@ -31,7 +32,7 @@ for project in verb subject article noun adjective; do
 	sleep 5
 done 
 
-cd ../lab6/sentence-server
+cd ../sentence-server
 project="sentence-server"
 
 	echo "-------------------"
